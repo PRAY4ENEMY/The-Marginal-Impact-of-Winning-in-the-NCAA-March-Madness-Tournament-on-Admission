@@ -1,26 +1,9 @@
 **Abstract:** The utility of success in college athletics is often debated by those who have an interest the broader success of institutions of higher education. While some believe that any dollar spent on athletics is a dollar not going towards investing in educational infrastructure, other hold that success in sports can be an effective mechanism for raising the national profile of a university. After adjusting winning based on a teams seeding in the NCAA's *March Madness* tournament and using a fixed-effects regression model, we can estimate the causal impact of post-season success in NCAA Division 1 basketball on the quantity of applications that a university receives. We find that success, conditional on expectations, is causally correlated with a 1% increase in the number of applications a schools admission office receives.
 
-```{=tex}
-\centering
-\space
-```
 
-
-```{r, echo=FALSE,out.width="200%"}
-knitr::include_graphics("/home/thrash-libre/pictures/xulogo.png")
-```
-
-```{=tex}
-\raggedright
-\newpage
-```
 # Introduction
 
 American Universities are unique in their willingness to spend large sums of money on their athletics teams. The two sports that are most responsible for this spending are college basketball and football. The NCAA *March Madness* tournament (the tournament) is one of the most recognizable fixtures of intercollegiate athletics. The entertainment apparatus that has popped up around this event is incredibly lucrative with 9.7 million viewers in 2018 and a 8.8 billion dollar exclusive broadcasting contract held by Columbia Broadcasting System (CBS) and Turner Sports. The upkeep of athletic departments is also major business. According to the NCAA technical report in 2018, the total expenditures of NCAA schools amounted to a total of 18.1 billion dollars. the total revenue reported in that year totaled to 18.2 billion dollars. Despite reporting net profits in 2018, that figure includes 6.5 billion dollars in *Institution and Government support* and 1.5 billion dollars in Student fees [@NCAA18]. When taken together, these revenues account for 8 billion or 44% of the inflows received by athletic departments that are a part of the NCAA. This calls into question the financial viability of college athletics because these funds could be used by universities in ways that are not related to athletics. In fact, out of the over 350 schools that participated in NCAA athletics in 2010, 18% of them were able to internally cover their operating costs [@Anderson17]. 
-
-```{r, echo=FALSE,out.width="200%",fig.align="center",fig.cap = "NCAA Revenues and Expenses 2018"}
-knitr::include_graphics("/home/thrash-libre/pictures/revinc.png")
-```
 
 There is an argument to be made, however, that athletic success has other positive effects on universities that justify the funds that they are given. In this manner we can think of athletics teams as amenities that students value [@Jacob18]. There is literature to suggest that at least some prospective college students state that a universities athletic prowess is a factor in their decision to attend a particular university [@Moshe22]. There is also literature to suggest that athletics helps college bring in more donations [@Humphrey07]. The main question that universities are tasked with answering is whether or not investments in sports yield any sort of return in any relevant domain?
 
@@ -48,10 +31,6 @@ In order to construct our panel data set for the fixed-effects regression model,
 
 ### Summary Statistics 
 
-```{r, echo=FALSE,fig.align="center",fig.cap = "Summary Statistics"}
-knitr::include_graphics("/home/thrash-libre/pictures/sunsa.png")
-```
-
 ### Why basketball? 
 
 While most other literature combines both football and basketball success into their models, this paper focus exclusively on post-season basketball success. The reason for this is because college basketball is a very easy sport to analyse, especially when compared to college football. This is for several reason. Primarily, basketball is structured to be as unpredictable as possible. The game time of an NCAA basketball game is 40 minutes, compared to the hour long game time of professional basketball, allows for fewer "observations" of skill which all for more upsets where a favored team losses. Additionally, basketball features an outside three point shot which is offers a higher reward for a higher risk of not making the shot. A game plan that relies on 3-point shots is a very volatile strategy. If a lower skilled team hits a favorable streak of makes and the higher skilled team hits a streak of bad luck, the lower skilled could potentially win. The volatility of the game is what makes it exiting for both fans and economists because it offers the opportunity to observe variation. Basketball teams are also able to play more games which gives a larger number of observation. Finally, College basketball is not dominated by a select handful of teams. While there are certainly teams that perform well consistently, there are more teams who have a reasonable shot at winning the tournament in a given year when compared to college football. One concern with exclusively looking basketball is that we could be omitting an important variable in football success. However, according to @Pitts18, the football success is not indicative of basketball success. 
@@ -73,10 +52,6 @@ The main limitations of this model have to do with the *performance* variable. I
 In accordance with previous literature, the model uses a lag period of one year. This lag period is selected because of the way that the college basketball and admissions seasons line up. Prospective students are tasked with making their decisions by the end spring of the calendar year which is a 1-3 after the conclusion of the basketball season. The way that admissions applications are reported is by incoming class which would put the reporting year of this number on year ahead of basketball results [@Pope09]. It is also unnecessary to include further lag periods in the model (See literature review).^[I did construct a regression model with further lag periods and found no statistical significance. This finding is consistent with the finding of Pope (2009)]. 
 
 # Results 
-
-```{r scrippin, echo=FALSE,fig.align="center",fig.cap = "Regression Table"}
-knitr::include_graphics("/home/thrash-libre/pictures/Sexytableraw.png")
-```
 
 Using the main regression, we find an effect size of .9% increase in applications received per win above expectation. After adding the additional controls of net price, seeding and enrollment we find no change is statistical significance or effect size. When we remove the top 10% most selective schools in the data set, we find a slight increase in the effect size with a 1.1% increase in applications received per win above expectation. Again, the additional controls did not change the results.
 
